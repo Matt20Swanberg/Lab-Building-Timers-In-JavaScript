@@ -22,13 +22,19 @@
  * Example Usage:
  * stopRecurringTimer(timerId); // Stops the recurring timer started with the given ID.
  */
+
 function recurringTimer(message, interval) {
   // Set up a timer using setInterval to log the message
+  let timerId = setInterval(function () {
+    console.log(message);
+  }, interval);
   // Return the timer ID
+  return timerId;
 }
 
 function stopRecurringTimer(timerId) {
   // Stop the timer using clearInterval
+  clearInterval(timerId);
 }
 
 module.exports = { recurringTimer, stopRecurringTimer };
