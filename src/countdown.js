@@ -22,7 +22,6 @@ function countdownTimer(startTime, interval) {
     remainingTime -= 1;
     // Stop the timer when time reaches 0
     if (remainingTime === 0) {
-      //console.log(0);
       clearInterval(timerId);
     }
   }, interval);
